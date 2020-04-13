@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podenv1
+spec:
+  containers:
+  - name: arunvel1988
+    image: bash
+    env:
+    - name: env1
+      value: "Warm greetings to"
+    - name: env2
+      value: "The Most Honorable"
+    - name: env3
+      value: "Kubernetes"
+    command: ["echo"]
+    args: ["$(env1) $(env2) $(env3)"]

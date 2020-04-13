@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: env-pod
+  labels:
+    purpose: env-demo
+spec:
+  containers:
+  - name: envar-demo-container
+    image: arunvel1988/alpine_solr
+    env:
+    - name: env1
+      value: "test"
+    - name: env2
+      value: "test2"
